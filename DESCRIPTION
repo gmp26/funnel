@@ -1,0 +1,11 @@
+Package: funnel
+Type: Package
+Title: Provides a function which plots mortality data in funnels or slices
+Version: 0.1.0
+Authors@R: person("David", "Spiegelhalter", email = "d.spiegelhalter@statslab.cam.ac.uk", role = c("aut", "cre"))
+Description: We provide two basic plots: a funnel where actual mortality rates are plotted
+  with their predicted confidence intervals against precision, and a sliced horizontal form which
+  permits hospital names alongside.
+License: MIT + file LICENSE
+LazyData: TRUE
+RoxygenNote: 5.0.1
