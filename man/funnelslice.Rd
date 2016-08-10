@@ -36,6 +36,10 @@ funnelslice(x, plot_title = "NY Cardiac Surgery", plot = "funnel",
 \item{tails}{A pair of p-values determining the inner and outer confidence limits}
 }
 \description{
-Funnel and slice plot generator - wrapped for export to shiny
+\code{funnelslice} This function wraps the core funnel4 function,
+reducing the parameters to those used by the shinyfunnelapp package.
+}
+\seealso{
+\code{\link{funnel4}}
 }
 

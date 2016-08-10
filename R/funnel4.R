@@ -3,6 +3,11 @@
 
 #####
 #' Core funnel and slice plot generator
+#'
+#' \code{funnel4} This function makes funnel plots or sliced funnel plots from
+#' a data frame like \code{\link{cabg}} of mortality data for a number of
+#' hospital cases.
+#'
 #' @importFrom "graphics" "axis" "par" "plot" "points" "polygon" "title"
 #' @importFrom "utils" "read.csv"
 #' @importFrom "stats" "dbinom" "pbinom" "qbinom"
@@ -32,6 +37,7 @@
 #' @param tails A pair of p-values determining the inner and outer confidence limits (?)
 #' @param Npoints The number of bernouilli trials used in an integer binomial approximation (?)
 #' @param bandcols Vector of colours used in bars
+#' @seealso \code{\link{funnelslice}}
 #####
 funnel4 <-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,

@@ -1,4 +1,8 @@
 #' Funnel and slice plot generator - wrapped for export to shiny
+#'
+#' \code{funnelslice} This function wraps the core funnel4 function,
+#'reducing the parameters to those used by the shinyfunnelapp package.
+
 #' @include funnel4.R
 #' @param x A data frame of mortality observations from a number of hospitals.
 #' @param plot_title The plot target
@@ -12,6 +16,7 @@
 #' @param plot.target Plot target if TRUE
 #' @param ypercent Show survival as percentage if true
 #' @param tails A pair of p-values determining the inner and outer confidence limits
+#' @seealso \code{\link{funnel4}}
 #' @export
 funnelslice <- function(x,
                         plot_title="NY Cardiac Surgery",

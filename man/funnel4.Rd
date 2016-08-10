@@ -62,6 +62,11 @@ funnel4(obs.prop = NA, denom = NA, pred.prop = NA, names = NA,
 \item{bandcols}{Vector of colours used in bars}
 }
 \description{
-Core funnel and slice plot generator
+\code{funnel4} This function makes funnel plots or sliced funnel plots from
+a data frame like \code{\link{cabg}} of mortality data for a number of
+hospital cases.
+}
+\seealso{
+\code{\link{funnelslice}}
 }
 
