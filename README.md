@@ -41,7 +41,7 @@ issue here in case the change is already planned.
 
 ## To do
 * [ ] Rename `funnel4` to `funnel`?
-* [ ] Add local tests
+* [x] Add local tests
 * [ ] Finish basic plot function, and stabilise parameters
 * [ ] Improve inline docs
 * [ ] Add vignettes
