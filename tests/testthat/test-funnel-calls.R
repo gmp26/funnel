@@ -2,13 +2,6 @@ context("Funnel4 runs silently")
 
 test_that("funnel4 works", {
 
-  png(filename = "testplot2.png",
-      width = 480, height = 480, pointsize = 12,
-      bg = "white"
-      )
-
-  #data_dir <- file.path(testthat::test_path(),"..","..","data");
-  #load(file.path(data_dir, "cabg.rda"));
   load("cabg.rda")
   x <- cabg
   N<- x$Cases
