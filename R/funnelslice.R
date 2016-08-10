@@ -1,5 +1,5 @@
 #' Funnel and slice plot generator - wrapped for export to shiny
-#' #' @include funnel4.R
+#' @include funnel4.R
 #' @param x A data frame of mortality observations from a number of hospitals.
 #' @param plot_title The plot target
 #' @param plot The plot type

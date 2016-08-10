@@ -2,8 +2,7 @@
 % Please edit documentation in R/funnelslice.R
 \name{funnelslice}
 \alias{funnelslice}
-\title{Funnel and slice plot generator - wrapped for export to shiny
-#' @include funnel4.R}
+\title{Funnel and slice plot generator - wrapped for export to shiny}
 \usage{
 funnelslice(x, plot_title = "NY Cardiac Surgery", plot = "funnel",
   xlabel = "Number of operations per hospital",
@@ -38,6 +37,5 @@ funnelslice(x, plot_title = "NY Cardiac Surgery", plot = "funnel",
 }
 \description{
 Funnel and slice plot generator - wrapped for export to shiny
-#' @include funnel4.R
 }
 
