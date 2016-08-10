@@ -6,6 +6,8 @@ Authors@R: person("David", "Spiegelhalter", email = "d.spiegelhalter@statslab.ca
 Description: We provide two basic plots: a funnel where actual mortality rates are plotted
   with their predicted confidence intervals against precision, and a sliced horizontal form which
   permits hospital names alongside.
+Suggests:
+    testthat
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
