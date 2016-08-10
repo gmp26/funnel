@@ -1,0 +1,45 @@
+# funnel
+Provides an R function to plot mortality rates in funnel or slice form.
+
+**This is an R package under development and is not ready for use.**
+
+
+## Usage
+
+To use from another RStudio project, install the devtools package,
+and then load the funnel package like this:
+
+```
+devtools::install_github("gmp26/funnel")
+library(funnel)
+?funnel4
+```
+
+## Development
+
+### Setup
+Create a new RStudio version controlled project from this distribution.
+
+### Workflow
+* Revise code
+* Rebuild docs from inline code annotations with `devtools::document()`
+* Rebuild package using Build > Build & Reload in the top right panel
+* On errors, repeat the above two steps to make sure the NAMESPACE file
+  is in sync
+* Commit changes and push back to GitHub
+* Test by loading the package into [shiny-funnel-app](https://github.com/gmp26/shiny-funnel-app)
+
+We could do with adding some local tests in this package so we don't need
+to push changes to test.
+
+## Contributions
+
+Unsolicited contributions are welcome as pull requests. Please first raise an
+issue here in case the change is already planned.
+
+## To do
+* [ ] Rename `funnel4` to `funnel`?
+* [ ] Add local tests
+* [ ] Finish basic plot function, and stabilise parameters
+* [ ] Improve inline docs
+* [ ] Add vignettes
