@@ -1,11 +1,13 @@
 # February 2016. New funnel program
 
+
 #####
 #' Core funnel and slice plot generator
-#' @importFrom "graphics" "axis" "par" "plot" "points" "polygon"
-#' @import "stats"
+#' @importFrom "graphics" "axis" "par" "plot" "points" "polygon" "title"
 #' @importFrom "utils" "read.csv"
+#' @importFrom "stats" "dbinom" "pbinom" "qbinom"
 #' @export
+#' @include data.R
 #' @param obs.prop A data frame of mortality observations from a number of hospitals.
 #' @param denom Number of cases
 #' @param pred.prop Predicted survival proportion
