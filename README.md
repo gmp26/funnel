@@ -20,6 +20,8 @@ library(funnel)
 ### Setup
 Create a new RStudio version controlled project from this distribution.
 
+See [Package Development Prerequisites]. On MacOSX this amounts to installing [XCode](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [LaTeX](http://www.tug.org/mactex/downloading.html) so the documentation can be built.
+
 ### Workflow
 * Revise code
 * Rebuild docs from inline code annotations with `devtools::document()`
