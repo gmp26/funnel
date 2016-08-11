@@ -27,8 +27,6 @@ Prerequisites](https://support.rstudio.com/hc/en-us/articles/200486498-Package-D
 
 ### Workflow
 * Revise code
-* Run `Build and Load`
-* Rebuild docs from inline code annotations with `devtools::document()`
 * Rebuild package using Build > Build & Reload in the top right panel
 * Commit changes and push back to GitHub
 * Test interactively by loading the package into [shiny-funnel-app](https://github.com/gmp26/shiny-funnel-app)
