@@ -41,7 +41,7 @@ funnelslice <- function(x,
 
   # test using slices
   funnel4(obs.prop=R/N,  denom=N, pred.prop=P/N, names=names,
-          plot=plot_title, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
+          plot=plot, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
           mean.target=mean.target, plot.target=plot.target, title=plot_title,xrange=xrange,
           yrange=yrange, tails=tails,xlab=xlabel,ylab=ylabel,ypercent=ypercent,
           bandcols=c("white","cyan","cyan3")
