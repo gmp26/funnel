@@ -1,0 +1,82 @@
+---
+title: "Funnel Plot Samples"
+author: "Mike Pearson"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Here we are calling the simplified `funnelslice` function using various parameters.
+
+## Load the funnel library from github.
+
+You'll need the devtools package.
+
+```{r, echo = TRUE}
+devtools::install_github('gmp26/funnel')
+library(funnel)
+load("../data/cabg.rda") # if necessary to access cabg data
+x <- cabg # cabg was created by reading CABG-hospitals-03.csv into
+```
+
+### Small plots
+
+Not so good yet!
+
+```{r, echo = TRUE, fig.width = 4}
+funnelslice(x, plot_title = "Slice", plot = "slice")
+funnelslice(x, plot_title = "Funnel")
+```
+
+### Larger plots
+
+In fact we need a figure size of about 7 inches wide, 6.5 inches high for a reasonable display. There's also an issue with margins in the slice mode.
+
+```{r, echo = TRUE, fig.width = 7, fig.height = 6.5}
+funnelslice(x, plot_title = "Slice", plot = "slice")
+```
+
+```{r, echo = TRUE, fig.width = 7, fig.height = 6.5}
+funnelslice(x, plot_title = "Funnel")
+```
+
+### Lets get some test coverage...
+
+```{r, echo = TRUE, dev = 'png', fig.width = 4}
+funnelslice(x, plot_title = "Slice", plot = "slice", tails = c(0.01,0.05))
+funnelslice(x, plot_title = "Funnel", tails = c(0.01,0.05))
+```
+
+```{r, echo = TRUE, dev = 'png', fig.width = 4}
+funnelslice(x, plot_title = "Slice", plot = "slice", xlabel = "xlabel", ylabel = "ylabel")
+funnelslice(x, plot_title = "Funnel", xlabel = "xlabel", ylabel = "ylabel")
+
+```
+
+
+```{r, echo = TRUE, dev = 'png', fig.width = 4}
+
+funnelslice(x, plot_title = "Slice", plot = "slice",riskadj = T)
+funnelslice(x, plot_title = "Funnel", riskadj = T)
+```
+
+###Notice the failed and missing funnel plot when riskadj  =  T above.
+
+```{r, echo = TRUE, dev = 'png', fig.width = 4}
+
+funnelslice(x, plot_title = "Slice", plot = "slice", RASRplot  =  T)
+funnelslice(x, plot_title = "Funnel", RASRplot  =  T)
+```
+
+###Toggling the remaining booleans...
+
+```{r, echo = TRUE, dev = 'png', fig.width = 4}
+funnelslice(x, plot_title = "Slice", plot = "slice", mean.target = F, plot.target = T, ypercent = F)
+funnelslice(x, plot_title = "Funnel", mean.target = F, plot.target = T, ypercent = F)
+
+
+```
+

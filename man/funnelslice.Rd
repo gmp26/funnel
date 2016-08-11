@@ -7,7 +7,7 @@
 funnelslice(x, plot_title = "NY Cardiac Surgery", plot = "funnel",
   xlabel = "Number of operations per hospital",
   ylabel = "Survival rate (\%)", rank = "precision", riskadj = F,
-  RASRplot = F, mean.target = F, plot.target = F, ypercent = T,
+  RASRplot = F, mean.target = T, plot.target = F, ypercent = T,
   tails = c(0.001, 0.025))
 }
 \arguments{

@@ -26,7 +26,7 @@ funnelslice <- function(x,
                         rank="precision",
                         riskadj=F,
                         RASRplot=F,
-                        mean.target=F,
+                        mean.target=T,
                         plot.target=F,
                         ypercent=T,
                         tails=c(0.001,0.025)) {
