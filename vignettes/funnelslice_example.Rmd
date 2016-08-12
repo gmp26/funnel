@@ -20,14 +20,16 @@ devtools::install_github('gmp26/funnel')
 library(funnel)
 load("../data/cabg.rda") # if necessary to access cabg data
 x <- cabg # cabg was created by reading CABG-hospitals-03.csv into
-```
+``` 
 
 ### Small plots
 
 Not so good yet!
 
-```{r, echo = TRUE, fig.width = 4}
+```{r, echo = TRUE}
+par(cex = 0.5)
 funnelslice(x, plot_title = "Slice", plot = "slice")
+par(cex = 0.5)
 funnelslice(x, plot_title = "Funnel")
 ```
 

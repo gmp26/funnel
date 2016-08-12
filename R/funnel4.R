@@ -151,18 +151,21 @@ binomial.limits=function(precisions,target,tails){
 ####################################
 
 #   assume labs come in as matrix - then proceed to printing full table later
-plot.slice=function(y, precision,names, target, plot.target,  rank, title, xrange, yrange,
+plot.slice <- function(y, precision, names, target, plot.target,  rank, title, xrange, yrange,
                     tails,limits, xlab, ylab,pointsymbol, ypercent, bandcols  ) {
-  nunits=length(y)
-  scale=1
-  ord=1:nunits  # current order
-  if(rank=="outcome"){ord=order(y)}
-  if(rank=="precision"){ord=order(precision)}
+  nunits <- length(y)
+  scale <- 1
+  ord <- 1:nunits  # current order
+  if(rank == "outcome"){ord = order(y)}
+  if(rank == "precision"){ord = order(precision)}
   # set up display
 
   labs=as.matrix(cbind(names))
   par(mgp = c(2, 0.75, 0))
-  par(mar = c(3.5, trunc(max(nchar(labs[, 1]))/3) + 3, 1, 2))
+  par(mar = c(3.5,
+              trunc(max(nchar(labs[, 1]))/3) + 10,
+              1,
+              0))
   par(adj = 0.5) # centred
   plot(yrange[1], 1, type = "n", bty="n", ylim = c(0, nunits + 1),
        xlim = yrange, ylab = "",xlab =ylab,main=title,axes=F)
@@ -231,7 +234,7 @@ plot.funnel<-
            tails, limits, xlab, ylab,  pointsymbol, legend, ypercent,  bandcols){
 
     # set up plotting region  - reset parameters!
-    scale=1
+    # scale=1
     limittype=c(2,3)  # linestyle
     limitwidth=2  # width of lines
     nunits=length(y)
@@ -268,7 +271,8 @@ plot.funnel<-
       par(new=T)
       plot(xrange, c(target, target), type = "l", ylim = yrange,
            xlim = xrange, ylab ="", xlab = "", lty = 1, main = "",
-           cex = scale, axes = F, lwd = 2)
+           #cex = scale,
+           axes = F, lwd = 2)
     }
 
     # pretty labels

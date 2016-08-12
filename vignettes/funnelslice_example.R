@@ -4,8 +4,10 @@ library(funnel)
 load("../data/cabg.rda") # if necessary to access cabg data
 x <- cabg # cabg was created by reading CABG-hospitals-03.csv into
 
-## ---- echo = TRUE, fig.width = 4-----------------------------------------
+## ---- echo = TRUE--------------------------------------------------------
+par(cex = 0.5)
 funnelslice(x, plot_title = "Slice", plot = "slice")
+par(cex = 0.5)
 funnelslice(x, plot_title = "Funnel")
 
 ## ---- echo = TRUE, fig.width = 7, fig.height = 6.5-----------------------
