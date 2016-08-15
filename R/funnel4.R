@@ -271,7 +271,7 @@ plot.funnel<-
       par(new=T)
       plot(xrange, c(target, target), type = "l", ylim = yrange,
            xlim = xrange, ylab ="", xlab = "", lty = 1, main = "",
-           # cex = scale,
+           cex = scale,
            axes = F, lwd = 2)
     }
 
