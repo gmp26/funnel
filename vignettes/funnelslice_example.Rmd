@@ -26,16 +26,24 @@ x <- cabg # cabg was created from "inst/extdata/CABG-hospitals-03.csv"
 
 Not so good yet! 
 
-```{r, echo = TRUE}
+```{r, echo=TRUE, fig.width=4}
 par(cex = 0.5)
 funnelslice(x, plot_title = "Slice", plot = "slice")
-par(cex = 0.5)
+```
+
+Plot.funnel is very fussy about the global value of cex in a way that plot.slice is not. I don't understand how cex is meant to be 
+used in R yet. 
+
+```{r, echo=TRUE, fig.width=4}
+par(cex = 1)
 funnelslice(x, plot_title = "Funnel")
 ```
 
 ### Larger plots
 
 In fact we need a figure size of about 7 inches wide, 6.5 inches high for a reasonable display. There's also an issue with margins in the slice mode.
+
+Plot.slice estimates the margin width for text labels from a character count, but this is rather unreliable when viewed in different ways (Native R plot, exported png image, rescaled etc.) Is there a way to format the hospital label text and measure the required width in advance (e.g. by finding the width of the biggest element.)
 
 ```{r, echo = TRUE, fig.width = 7, fig.height = 6.5}
 funnelslice(x, plot_title = "Slice", plot = "slice")

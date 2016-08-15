@@ -234,7 +234,7 @@ plot.funnel<-
            tails, limits, xlab, ylab,  pointsymbol, legend, ypercent,  bandcols){
 
     # set up plotting region  - reset parameters!
-    # scale=1
+    scale=1
     limittype=c(2,3)  # linestyle
     limitwidth=2  # width of lines
     nunits=length(y)
@@ -271,7 +271,7 @@ plot.funnel<-
       par(new=T)
       plot(xrange, c(target, target), type = "l", ylim = yrange,
            xlim = xrange, ylab ="", xlab = "", lty = 1, main = "",
-           #cex = scale,
+           # cex = scale,
            axes = F, lwd = 2)
     }
 
