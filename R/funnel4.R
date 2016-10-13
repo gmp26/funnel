@@ -43,7 +43,7 @@ funnel4 <-
   function(obs.prop=NA, denom=NA, pred.prop=NA, names=NA,
            plot = "funnel", rank="none", riskadj=F, RASRplot=F,
            ratedenom = NA,	mean.target = T, target = NA, plot.target=F,
-           title = "", scale = 0.7, xrange = c(	0, 1000), yrange = c(0, 1),
+           title = "", scale = 0.7, xrange = c(0, 1000), yrange = c(0, 1),
            tails = c(0.001, 0.025), Npoints = 200, xlab = "", ylab = "",
            pointsymbol=16, legend=1, ypercent=T,   bandcols=c("white","lightblue","azure"))
   {
@@ -362,14 +362,14 @@ qbinom.interp<-function(p, denom, target,tail)
   if(tail=="lower"){
     rp = qbinom(p, denom, target) # this is lowest R such that df>p
     alpha = (pbinom(rp,denom,target) - p)/dbinom(rp,denom,target)
-    x<-  pmax( (rp - alpha)/denom , 0.00001)
+    x <- pmax( (rp - alpha)/denom , 0.00001)
   }
   if(tail=="upper"){
     rp = qbinom(1-p, denom, target) # this is highst x such that P(>=x) >p
     alpha = (pbinom(rp,denom,target) - (1-p)) / dbinom(rp,denom,target)
-    x<- pmin(  (rp + 1 - alpha)/denom , 0.99999)
+    x <- pmin(  (rp + 1 - alpha)/denom , 0.99999)
   }
-  x
+  return(x)
 }
 
 

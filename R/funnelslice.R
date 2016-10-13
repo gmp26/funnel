@@ -44,6 +44,6 @@ funnelslice <- function(x,
           plot=plot, rank=rank, riskadj=riskadj, RASRplot=RASRplot,
           mean.target=mean.target, plot.target=plot.target, title=plot_title,xrange=xrange,
           yrange=yrange, tails=tails,xlab=xlabel,ylab=ylabel,ypercent=ypercent,
-          bandcols=c("white","cyan","cyan3")
+          bandcols=c("white","#0088ff4C","#0088ff98")
   )
 }
